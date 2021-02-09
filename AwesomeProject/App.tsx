@@ -1,15 +1,13 @@
 import React from 'react';
 import {
   View,
-  Text,
 } from 'react-native';
+import TxtComponent from './src/txt-component';
 
 const App: React.FC = () => {
   return(
     <View>
-      <Text>
-        hello world!
-      </Text>
+      <TxtComponent text = 'Hello World!'/>
     </View>
   )
 }
