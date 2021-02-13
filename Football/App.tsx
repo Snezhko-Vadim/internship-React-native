@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { View } from 'react-native';
 
 import SplashScreen from 'react-native-splash-screen';
-import TxtComponent from './src/txt-component';
+import TxtComponent from 'src/txt-component';
 
 const App: React.FC = () => {
   useEffect(() => {
