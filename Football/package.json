@@ -1,5 +1,5 @@
 {
-  "name": "AwesomeProject",
+  "name": "Football",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -28,9 +28,11 @@
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
     "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
-    "prettier": "^2.2.1",
+    "prettier": "2.2.1",
+    "react-native-rename": "^2.7.0",
     "react-test-renderer": "16.13.1",
     "typescript": "^4.1.3"
   },
