@@ -1,15 +1,11 @@
-import {createStore, combineReducers} from 'redux';
+import { createStore } from 'redux';
 
-import {settingsReducer, authReducer} from './reducers/reducers';
+import { rootReducer } from './reducers';
 
-const reducers = combineReducers({
-  settingsReducer,
-  authReducer,
-});
-const store = createStore(reducers);
+const store = createStore(rootReducer);
 
-type reducersType = typeof reducers;
+type reducersType = typeof rootReducer;
 
 export type appStateType = ReturnType<reducersType>;
 
-export {store};
+export { store };
