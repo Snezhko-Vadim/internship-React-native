@@ -1,10 +1,12 @@
-const authInitialState = {
+import { AuthActionType, AuthInitialStateType } from './types';
+
+const authInitialState: AuthInitialStateType = {
   isLoading: true,
   isSignOut: false,
   userToken: null,
 };
 
-export const authReducer = (state = authInitialState, action) => {
+export const authReducer = (state = authInitialState, action: AuthActionType) => {
   switch (action.type) {
     case 'SIGN_IN':
       return {

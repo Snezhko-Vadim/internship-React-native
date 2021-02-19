@@ -1,8 +1,20 @@
-export interface IAction {
-  type: string;
-  payload?: any;
-}
+import { AuthorisationTokenType } from '../actions/types';
 
-export interface ISettingsInitialState {
+export type AuthActionType = {
+  type: string;
+  token?: AuthorisationTokenType;
+};
+
+export type AuthInitialStateType = {
+  isLoading: boolean;
+  isSignOut: boolean;
+  userToken: null | AuthorisationTokenType;
+};
+
+export type SettingsInitialStateType = {
   isEnabledDarkTheme: boolean;
-}
+};
+
+export type SettingsActionType = {
+  type: string;
+};
