@@ -1,8 +1,8 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {createStackNavigator} from '@react-navigation/stack';
-import {BottomTabNavigator} from '../BottomTabNavigator';
-import {AuthenticationScreen} from '../../screens/AuthenticationScreen';
+import { useSelector } from 'react-redux';
+import { createStackNavigator } from '@react-navigation/stack';
+import { BottomTabNavigator } from '../BottomTabNavigator';
+import { AuthScreen } from '../../screens/AuthScreen';
 
 const Stack = createStackNavigator();
 
@@ -11,15 +11,9 @@ export const StackNavigator = () => {
   return (
     <Stack.Navigator>
       {userToken == null ? (
-        <Stack.Screen
-          name={'Authentication'}
-          component={AuthenticationScreen}
-        />
+        <Stack.Screen name={'Authentication'} component={AuthScreen} />
       ) : (
-        <Stack.Screen
-          name={'bottomTabNavigator'}
-          component={BottomTabNavigator}
-        />
+        <Stack.Screen name={'bottomTabNavigator'} component={BottomTabNavigator} />
       )}
     </Stack.Navigator>
   );

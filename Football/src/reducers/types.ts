@@ -1,20 +1,11 @@
-import { AuthorisationTokenType } from '../actions/types';
-
-export type AuthActionType = {
-  type: string;
-  token?: AuthorisationTokenType;
-};
+import { AuthTokenType } from '../actions/types';
 
 export type AuthInitialStateType = {
   isLoading: boolean;
   isSignOut: boolean;
-  userToken: null | AuthorisationTokenType;
+  userToken: null | AuthTokenType;
 };
 
 export type SettingsInitialStateType = {
   isEnabledDarkTheme: boolean;
-};
-
-export type SettingsActionType = {
-  type: string;
 };

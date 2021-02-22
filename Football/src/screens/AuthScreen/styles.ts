@@ -1,11 +1,11 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
-type SettingsScreenStyles = {
+type AuthScreenStyles = {
   container: ViewStyle;
   text: TextStyle;
 };
 
-export const styles = StyleSheet.create<SettingsScreenStyles>({
+export const styles = StyleSheet.create<AuthScreenStyles>({
   container: {
     flex: 1,
     alignItems: 'center',

@@ -1,5 +1,5 @@
-import { AuthorisationTokenType } from '../../actions/types';
+import { AuthTokenType } from '../../actions/types';
 
 export type RootState = {
-  authReducer: { userToken: AuthorisationTokenType };
+  authReducer: { userToken: AuthTokenType };
 };

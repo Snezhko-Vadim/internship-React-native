@@ -1,18 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { AuthenticationScreenView } from './AuthenticationScreenView';
-import { AuthorisationTokenType } from './types';
+import { AuthScreenView } from './AuthScreenView';
+import { AuthTokenType } from './types';
 
-export const AuthenticationScreen: React.FC = () => {
+export const AuthScreen: React.FC = () => {
   const dispatch = useDispatch();
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const signInAction = (type: boolean, token: AuthorisationTokenType) =>
+  const signInAction = (type: 'SIGN_IN', token: AuthTokenType) =>
     dispatch({ type: type, token: token });
 
   return (
-    <AuthenticationScreenView
+    <AuthScreenView
       signInAction={signInAction}
       onChangeName={setUsername}
       onChangePass={setPassword}

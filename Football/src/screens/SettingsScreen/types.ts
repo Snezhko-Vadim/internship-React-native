@@ -3,6 +3,6 @@ export type RootState = {
 };
 
 export type SettingsScreenViewPropsType = {
-  colorSchemeSwitchAction: () => any;
+  colorSchemeSwitchAction(): { type: 'SWITCH_COLOR_SCHEME' };
   isEnabledDarkTheme: boolean;
 };

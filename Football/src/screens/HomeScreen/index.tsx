@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { useTheme } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
 import styles from './styles';
 import { RootState } from './types';
-
-import { useSelector } from 'react-redux';
 
 export const HomeScreen = () => {
   const { colors } = useTheme();

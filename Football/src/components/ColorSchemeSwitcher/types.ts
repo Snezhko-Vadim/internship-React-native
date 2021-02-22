@@ -1,4 +1,4 @@
 export type ColorSchemeSwitcherPropsType = {
-  colorSchemeSwitchAction: () => any;
+  colorSchemeSwitchAction(): { type: 'SWITCH_COLOR_SCHEME' };
   isEnabledDarkTheme: boolean;
 };

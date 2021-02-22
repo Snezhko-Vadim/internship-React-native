@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View, TextInput, Button } from 'react-native';
 import { styles } from './styles';
-import { AuthenticationScreenViewPropsType } from './types';
+import { AuthScreenViewPropsType } from './types';
 
-export const AuthenticationScreenView: React.FC<AuthenticationScreenViewPropsType> = ({
+export const AuthScreenView: React.FC<AuthScreenViewPropsType> = ({
   signInAction,
   onChangeName,
   onChangePass,
