@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { View, Text } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import styles from './styles';
 import { RootState } from './types';
 
-export const HomeScreen = () => {
+export const HomeScreen: FC = () => {
   const { colors } = useTheme();
   const token = useSelector((state: RootState) => state.authReducer.userToken);
   return (

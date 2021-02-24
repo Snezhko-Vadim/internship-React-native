@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { createStackNavigator } from '@react-navigation/stack';
 import { BottomTabNavigator } from '../BottomTabNavigator';
@@ -7,7 +7,7 @@ import { rootState } from './types';
 
 const Stack = createStackNavigator();
 
-export const StackNavigator = () => {
+export const StackNavigator: FC = () => {
   const userToken = useSelector((state: rootState) => state.authReducer.userToken);
   return (
     <Stack.Navigator>

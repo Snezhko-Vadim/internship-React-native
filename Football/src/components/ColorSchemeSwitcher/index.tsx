@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Switch, View } from 'react-native';
 import { ColorSchemeSwitcherPropsType } from './types';
 
-export const ColorSchemeSwitcher: React.FC<ColorSchemeSwitcherPropsType> = ({
+export const ColorSchemeSwitcher: FC<ColorSchemeSwitcherPropsType> = ({
   colorSchemeSwitchAction,
   isEnabledDarkTheme,
 }) => {

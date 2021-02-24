@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { AuthScreenView } from './AuthScreenView';
 import { AuthTokenType } from './types';
 
-export const AuthScreen: React.FC = () => {
+export const AuthScreen: FC = () => {
   const dispatch = useDispatch();
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');

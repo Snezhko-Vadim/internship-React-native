@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { RootState } from './types';
 import { useSelector, useDispatch } from 'react-redux';
 import { SettingsScreenView } from './SettingsScreenView';
 import { allActions } from '../../actions';
 
-export const SettingsScreen: React.FC = () => {
+export const SettingsScreen: FC = () => {
   const isEnabledDarkTheme = useSelector(
     (state: RootState) => state.settingsReducer.isEnabledDarkTheme,
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen } from '../../screens/HomeScreen';
@@ -7,7 +7,7 @@ import { styles } from './styles';
 
 const Tab = createBottomTabNavigator();
 
-export const BottomTabNavigator: React.FC = () => {
+export const BottomTabNavigator: FC = () => {
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -15,8 +15,8 @@ export const BottomTabNavigator: React.FC = () => {
         tabStyle: styles.tabStyle,
       }}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name='Home' component={HomeScreen} />
+      <Tab.Screen name='Settings' component={SettingsScreen} />
     </Tab.Navigator>
   );
 };

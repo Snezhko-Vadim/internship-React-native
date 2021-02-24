@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { AppNavigatorView } from './AppNavigatorView';
 import { RootState } from './types';
 
-export const AppNavigator: React.FC = () => {
+export const AppNavigator: FC = () => {
   const isEnabledDarkTheme = useSelector(
     (state: RootState) => state.settingsReducer.isEnabledDarkTheme,
   );

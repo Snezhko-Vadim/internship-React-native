@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './styles';
 import { SettingsScreenViewPropsType } from './types';
 import { ColorSchemeSwitcher } from '../../components/ColorSchemeSwitcher';
 import { useTheme } from '@react-navigation/native';
 
-export const SettingsScreenView: React.FC<SettingsScreenViewPropsType> = ({
+export const SettingsScreenView: FC<SettingsScreenViewPropsType> = ({
   colorSchemeSwitchAction,
   isEnabledDarkTheme,
 }) => {
