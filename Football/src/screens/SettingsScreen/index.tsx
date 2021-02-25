@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { RootState } from './types';
+import { RootState } from '../../reducers/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { SettingsScreenView } from './SettingsScreenView';
 import { allActions } from '../../actions';

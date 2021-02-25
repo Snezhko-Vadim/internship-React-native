@@ -3,15 +3,15 @@ import { useSelector } from 'react-redux';
 import { createStackNavigator } from '@react-navigation/stack';
 import { BottomTabNavigator } from '../BottomTabNavigator';
 import { AuthScreen } from '../../screens/AuthScreen';
-import { rootState } from './types';
+import { RootState } from '../../reducers/types';
 
 const Stack = createStackNavigator();
 
 export const StackNavigator: FC = () => {
-  const userToken = useSelector((state: rootState) => state.authReducer.userToken);
+  const userToken = useSelector((state: RootState) => state.authReducer.userToken);
   return (
     <Stack.Navigator>
-      {userToken == null ? (
+      {userToken === undefined ? (
         <Stack.Screen name={'Authentication'} component={AuthScreen} />
       ) : (
         <Stack.Screen name={'bottomTabNavigator'} component={BottomTabNavigator} />

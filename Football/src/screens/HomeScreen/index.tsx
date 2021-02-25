@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import styles from './styles';
-import { RootState } from './types';
+import { RootState } from '../../reducers/types';
 
 export const HomeScreen: FC = () => {
   const { colors } = useTheme();
@@ -11,7 +11,11 @@ export const HomeScreen: FC = () => {
   return (
     <View style={styles.container}>
       <Text style={{ color: colors.text }}>Home</Text>
-      <Text style={{ color: colors.text }}>Hello, {token.name}</Text>
+      {token !== undefined ? (
+        <Text style={{ color: colors.text }}>Hello, {token.name}</Text>
+      ) : (
+        <Text>Please, log in</Text>
+      )}
     </View>
   );
 };

@@ -4,7 +4,7 @@ import { AuthActionType } from '../actions/types';
 const authInitialState: AuthInitialStateType = {
   isLoading: true,
   isSignOut: false,
-  userToken: null,
+  userToken: undefined,
 };
 
 export const authReducer = (state = authInitialState, action: AuthActionType) => {
@@ -19,7 +19,7 @@ export const authReducer = (state = authInitialState, action: AuthActionType) =>
       return {
         ...state,
         isSignOut: true,
-        userToken: null,
+        userToken: undefined,
       };
     case 'RESTORE_TOKEN':
       return {
