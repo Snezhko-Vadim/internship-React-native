@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { createStackNavigator } from '@react-navigation/stack';
-import { BottomTabNavigator } from '../BottomTabNavigator';
-import { AuthScreen } from '../../screens/AuthScreen';
-import { RootState } from '../../reducers/types';
+import { BottomTabNavigator } from 'navigation/BottomTabNavigator';
+import { AuthScreen } from 'screens/AuthScreen';
+import { RootState } from 'reducers/types';
 
 const Stack = createStackNavigator();
 

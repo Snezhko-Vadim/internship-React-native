@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeScreen } from '../../screens/HomeScreen';
-import { SettingsScreen } from '../../screens/SettingsScreen';
+import { HomeScreen } from 'screens/HomeScreen';
+import { SettingsScreen } from 'screens/SettingsScreen';
 import { styles } from './styles';
 
 const Tab = createBottomTabNavigator();

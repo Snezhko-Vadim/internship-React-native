@@ -23,10 +23,14 @@
     "noImplicitReturns": true,             
     "noFallthroughCasesInSwitch": true,
 /* Module Resolution Options */
-    "moduleResolution": "node",           
-    "baseUrl": ".",                      
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true, 
-    "esModuleInterop": true   
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    /* Base directory to resolve non-absolute module names. */
+    "paths": {
+      "@screens": ["./screens"],
+    }
   },
   "exclude": [
     "app/__tests__/" // exclude test files

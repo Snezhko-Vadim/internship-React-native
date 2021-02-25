@@ -1,4 +1,4 @@
-import { AuthTokenType } from '../actions/types';
+import { AuthTokenType } from 'actions/types';
 import { rootReducer } from './index';
 
 export type AuthInitialStateType = {

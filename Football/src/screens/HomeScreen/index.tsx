@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import styles from './styles';
-import { RootState } from '../../reducers/types';
+import { RootState } from 'reducers/types';
 
 export const HomeScreen: FC = () => {
   const { colors } = useTheme();

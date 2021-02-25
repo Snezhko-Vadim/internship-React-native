@@ -1,22 +1,22 @@
-import { AuthTokenType, SIGN_IN, SIGN_OUT, RESTORE_TOKEN } from './types';
+import { AuthTokenType, AUTH_STRINGS } from './types';
 
 export const signIn = (token: AuthTokenType) => {
   return {
-    type: SIGN_IN,
+    type: AUTH_STRINGS.SIGN_IN,
     token: token,
   };
 };
 
 export const signOut = (token: AuthTokenType) => {
   return {
-    type: SIGN_OUT,
+    type: AUTH_STRINGS.SIGN_OUT,
     token: token,
   };
 };
 
 export const restoreToken = (token: AuthTokenType) => {
   return {
-    type: RESTORE_TOKEN,
+    type: AUTH_STRINGS.RESTORE_TOKEN,
     token: token,
   };
 };

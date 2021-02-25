@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthTokenType } from '../../actions/types';
+import { AuthTokenType } from 'actions/types';
 
 export { AuthTokenType };
 

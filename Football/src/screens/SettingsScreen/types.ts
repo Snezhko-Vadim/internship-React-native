@@ -1,8 +1,6 @@
-export type RootState = {
-  settingsReducer: { isEnabledDarkTheme: boolean };
-};
+import { SettingsActionType } from '../../actions/types';
 
 export type SettingsScreenViewPropsType = {
-  colorSchemeSwitchAction(): { type: 'SWITCH_COLOR_SCHEME' };
+  colorSchemeSwitchAction(): SettingsActionType;
   isEnabledDarkTheme: boolean;
 };

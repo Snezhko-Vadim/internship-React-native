@@ -1,5 +1,5 @@
 import { AuthInitialStateType } from './types';
-import { AuthActionType } from '../actions/types';
+import { AuthActionType, AUTH_STRINGS } from 'actions/types';
 
 const authInitialState: AuthInitialStateType = {
   isLoading: true,
@@ -9,19 +9,19 @@ const authInitialState: AuthInitialStateType = {
 
 export const authReducer = (state = authInitialState, action: AuthActionType) => {
   switch (action.type) {
-    case 'SIGN_IN':
+    case AUTH_STRINGS.SIGN_IN:
       return {
         ...state,
         isSignOut: false,
         userToken: action.token,
       };
-    case 'SIGN_OUT':
+    case AUTH_STRINGS.SIGN_OUT:
       return {
         ...state,
         isSignOut: true,
         userToken: undefined,
       };
-    case 'RESTORE_TOKEN':
+    case AUTH_STRINGS.RESTORE_TOKEN:
       return {
         ...state,
         userToken: action.token,
