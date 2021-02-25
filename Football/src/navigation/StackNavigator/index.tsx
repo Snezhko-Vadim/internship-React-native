@@ -10,9 +10,26 @@ const Stack = createStackNavigator();
 export const StackNavigator: FC = () => {
   const userToken = useSelector((state: RootState) => state.authReducer.userToken);
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#277D38',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+        headerTitleAlign: 'center',
+      }}
+    >
       {userToken === undefined ? (
-        <Stack.Screen name={'Authentication'} component={AuthScreen} />
+        <Stack.Screen
+          name={'Authentication'}
+          component={AuthScreen}
+          options={{
+            title: 'Authentication',
+          }}
+        />
       ) : (
         <Stack.Screen name={'bottomTabNavigator'} component={BottomTabNavigator} />
       )}
