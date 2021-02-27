@@ -2,16 +2,16 @@ import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
 type AuthScreenStyles = {
   container: ViewStyle;
-  text: TextStyle;
-  signIn: TextStyle;
   inputs: TextStyle;
+  signIn: TextStyle;
+  text: TextStyle;
   title: TextStyle;
 };
 
 export const styles = StyleSheet.create<AuthScreenStyles>({
   container: {
-    flex: 1,
     alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
   },
   text: {},
@@ -22,20 +22,20 @@ export const styles = StyleSheet.create<AuthScreenStyles>({
   },
   signIn: {
     backgroundColor: 'green',
-    paddingHorizontal: 15,
-    paddingVertical: 7,
     borderRadius: 7,
     color: 'white',
     fontSize: 17,
+    paddingHorizontal: 15,
+    paddingVertical: 7,
   },
   inputs: {
     borderColor: 'gray',
-    borderWidth: 1,
     borderRadius: 5,
-    width: 200,
+    borderWidth: 1,
+    fontSize: 18,
     height: 50,
     marginBottom: 20,
-    fontSize: 18,
     paddingHorizontal: 10,
+    width: 200,
   },
 });

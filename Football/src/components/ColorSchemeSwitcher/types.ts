@@ -1,4 +1,6 @@
+import { SettingsActionType } from 'actions/types';
+
 export type ColorSchemeSwitcherPropsType = {
-  colorSchemeSwitchAction(): { type: 'SWITCH_COLOR_SCHEME' };
+  colorSchemeSwitchAction(): SettingsActionType;
   isEnabledDarkTheme: boolean;
 };

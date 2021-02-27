@@ -4,6 +4,7 @@ import { ColorSchemeSwitcherPropsType } from './types';
 
 export const ColorSchemeSwitcher: FC<ColorSchemeSwitcherPropsType> = (props) => {
   const { colorSchemeSwitchAction, isEnabledDarkTheme } = props;
+
   return (
     <View>
       <Switch onValueChange={colorSchemeSwitchAction} value={isEnabledDarkTheme} />

@@ -8,9 +8,10 @@ import { RootState } from 'reducers/types';
 export const HomeScreen: FC = () => {
   const { colors } = useTheme();
   const token = useSelector((state: RootState) => state.authReducer.userToken);
+
   return (
     <View style={styles.container}>
-      <Text style={{ color: colors.text }}>Home</Text>
+      <Text style={{ color: colors.text }}>{'Home'}</Text>
       {token !== undefined ? (
         <Text style={{ color: colors.text }}>Hello, {token.name}</Text>
       ) : (

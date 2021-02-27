@@ -9,6 +9,7 @@ const Stack = createStackNavigator();
 
 export const StackNavigator: FC = () => {
   const userToken = useSelector((state: RootState) => state.authReducer.userToken);
+
   return (
     <Stack.Navigator
       screenOptions={{

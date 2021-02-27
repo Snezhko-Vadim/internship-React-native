@@ -21,12 +21,6 @@ export const authReducer = (state = authInitialState, action: AuthActionType) =>
         isSignOut: true,
         userToken: undefined,
       };
-    case AUTH_STRINGS.RESTORE_TOKEN:
-      return {
-        ...state,
-        userToken: action.token,
-        isLoading: false,
-      };
   }
   return state;
 };

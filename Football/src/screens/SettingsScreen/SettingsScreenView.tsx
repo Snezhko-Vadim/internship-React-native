@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './styles';
 import { SettingsScreenViewPropsType } from './types';
-import { ColorSchemeSwitcher } from '../../components/ColorSchemeSwitcher';
+import { ColorSchemeSwitcher } from 'components/ColorSchemeSwitcher';
 import { useTheme } from '@react-navigation/native';
 
 export const SettingsScreenView: FC<SettingsScreenViewPropsType> = (props) => {

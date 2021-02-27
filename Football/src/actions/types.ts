@@ -3,7 +3,6 @@ export enum SETTINGS_STRINGS {
 }
 export enum AUTH_STRINGS {
   SIGN_IN = 'SIGN_IN',
-  RESTORE_TOKEN = 'RESTORE_TOKEN',
   SIGN_OUT = 'SIGN_OUT',
 }
 
@@ -18,5 +17,6 @@ export type SettingsActionType = {
 
 export type AuthActionType = {
   type: AUTH_STRINGS;
+
   token?: AuthTokenType;
 };

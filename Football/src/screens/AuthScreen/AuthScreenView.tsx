@@ -8,13 +8,13 @@ export const AuthScreenView: FC<AuthScreenViewPropsType> = (props) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Football</Text>
-      <TextInput placeholder='Username' onChangeText={onChangeName} style={styles.inputs} />
+      <Text style={styles.title}>{'Football'}</Text>
+      <TextInput onChangeText={onChangeName} placeholder='Username' style={styles.inputs} />
       <TextInput
-        placeholder='Password'
         onChangeText={onChangePass}
-        style={styles.inputs}
+        placeholder='Password'
         secureTextEntry
+        style={styles.inputs}
       />
       <TouchableOpacity onPress={signInAction}>
         <Text style={styles.signIn}>Sign in</Text>

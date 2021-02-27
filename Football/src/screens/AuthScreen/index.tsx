@@ -5,19 +5,16 @@ import { allActions } from 'actions';
 
 export const AuthScreen: FC = () => {
   const dispatch = useDispatch();
-  const [username, setUsername] = React.useState('');
+  const [name, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const signInAction = () =>
-    dispatch(allActions.authorisationActions.signIn({ password: password, name: username }));
+  const signInAction = () => dispatch(allActions.authorisationActions.signIn({ password, name }));
 
   return (
     <AuthScreenView
-      signInAction={signInAction}
       onChangeName={setUsername}
       onChangePass={setPassword}
-      name={username}
-      password={password}
+      signInAction={signInAction}
     />
   );
 };

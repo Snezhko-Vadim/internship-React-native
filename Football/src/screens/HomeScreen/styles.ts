@@ -7,8 +7,8 @@ type HomeScreenStyles = {
 
 const styles = StyleSheet.create<HomeScreenStyles>({
   container: {
-    flex: 1,
     alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
   },
   text: {},

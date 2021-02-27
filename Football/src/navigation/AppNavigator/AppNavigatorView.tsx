@@ -7,6 +7,7 @@ import { AppNavigatorViewProps } from './types';
 
 export const AppNavigatorView: FC<AppNavigatorViewProps> = (props) => {
   const { isEnabledDarkTheme } = props;
+
   return (
     <NavigationContainer theme={isEnabledDarkTheme ? FootballDarkTheme : DefaultTheme}>
       <StackNavigator />

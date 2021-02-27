@@ -13,10 +13,3 @@ export const signOut = (token: AuthTokenType) => {
     token: token,
   };
 };
-
-export const restoreToken = (token: AuthTokenType) => {
-  return {
-    type: AUTH_STRINGS.RESTORE_TOKEN,
-    token: token,
-  };
-};
