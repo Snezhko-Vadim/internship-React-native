@@ -1,9 +1,14 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
-const styles = StyleSheet.create({
+type HomeScreenStyles = {
+  container: ViewStyle;
+  text: TextStyle;
+};
+
+const styles = StyleSheet.create<HomeScreenStyles>({
   container: {
-    flex: 1,
     alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
   },
   text: {},

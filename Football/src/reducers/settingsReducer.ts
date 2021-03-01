@@ -1,12 +1,13 @@
-import { IAction, ISettingsInitialState } from './types';
+import { SettingsInitialStateType } from './types';
+import { SettingsActionType, SETTINGS_STRINGS } from '@root/actions/types';
 
-const settingsInitialState: ISettingsInitialState = {
+const settingsInitialState: SettingsInitialStateType = {
   isEnabledDarkTheme: false,
 };
 
-export const settingsReducer = (state = settingsInitialState, action: IAction) => {
+export const settingsReducer = (state = settingsInitialState, action: SettingsActionType) => {
   switch (action.type) {
-    case 'SWITCH_COLOR_SCHEME':
+    case SETTINGS_STRINGS.SWITCH_COLOR_SCHEME:
       const isEnabledCurrent = state.isEnabledDarkTheme;
       return {
         ...state,

@@ -1,4 +1,4 @@
-import { RouteComponentProps } from 'react-router-dom';
-export interface ITabNavigatorProps extends RouteComponentProps {
-  isEnabledDarkTheme: boolean;
+export enum SCREEN_NAMES {
+  HOME = 'Home',
+  SETTINGS = 'Settings',
 }

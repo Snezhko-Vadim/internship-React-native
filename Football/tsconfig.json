@@ -23,10 +23,13 @@
     "noImplicitReturns": true,             
     "noFallthroughCasesInSwitch": true,
 /* Module Resolution Options */
-    "moduleResolution": "node",           
-    "baseUrl": ".",                      
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true, 
-    "esModuleInterop": true   
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@root/*": ["src/*"],
+    }
   },
   "exclude": [
     "app/__tests__/" // exclude test files

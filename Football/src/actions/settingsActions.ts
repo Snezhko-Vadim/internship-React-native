@@ -1,5 +1,7 @@
+import { SETTINGS_STRINGS } from './types';
+
 export const colorSchemeSwitch = () => {
   return {
-    type: 'SWITCH_COLOR_SCHEME',
+    type: SETTINGS_STRINGS.SWITCH_COLOR_SCHEME,
   };
 };

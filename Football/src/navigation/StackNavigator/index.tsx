@@ -1,25 +1,38 @@
-import React from 'react';
-import {useSelector} from 'react-redux';
-import {createStackNavigator} from '@react-navigation/stack';
-import {BottomTabNavigator} from '../BottomTabNavigator';
-import {AuthenticationScreen} from '../../screens/AuthenticationScreen';
+import React, { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { createStackNavigator } from '@react-navigation/stack';
+import { BottomTabNavigator } from '@root/navigation/BottomTabNavigator';
+import { AuthScreen } from '@root/screens/AuthScreen';
+import { RootState } from '@root/reducers/types';
 
 const Stack = createStackNavigator();
 
-export const StackNavigator = () => {
-  const userToken = useSelector((state) => state['authReducer'].userToken);
+export const StackNavigator: FC = () => {
+  const userToken = useSelector((state: RootState) => state.authReducer.userToken);
+
   return (
-    <Stack.Navigator>
-      {userToken == null ? (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#277D38',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+        headerTitleAlign: 'center',
+      }}
+    >
+      {userToken === undefined ? (
         <Stack.Screen
           name={'Authentication'}
-          component={AuthenticationScreen}
+          component={AuthScreen}
+          options={{
+            title: 'Authentication',
+          }}
         />
       ) : (
-        <Stack.Screen
-          name={'bottomTabNavigator'}
-          component={BottomTabNavigator}
-        />
+        <Stack.Screen name={'bottomTabNavigator'} component={BottomTabNavigator} />
       )}
     </Stack.Navigator>
   );
