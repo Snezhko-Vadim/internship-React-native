@@ -1,5 +1,5 @@
 import { SettingsInitialStateType } from './types';
-import { SettingsActionType } from 'actions/types';
+import { SettingsActionType, SETTINGS_STRINGS } from 'actions/types';
 
 const settingsInitialState: SettingsInitialStateType = {
   isEnabledDarkTheme: false,
@@ -7,7 +7,7 @@ const settingsInitialState: SettingsInitialStateType = {
 
 export const settingsReducer = (state = settingsInitialState, action: SettingsActionType) => {
   switch (action.type) {
-    case 'SWITCH_COLOR_SCHEME':
+    case SETTINGS_STRINGS.SWITCH_COLOR_SCHEME:
       const isEnabledCurrent = state.isEnabledDarkTheme;
       return {
         ...state,

@@ -1,4 +1,4 @@
-export enum screenNames {
-  home = 'home',
-  screen = 'screen',
+export enum SCREEN_NAMES {
+  HOME = 'Home',
+  SCREEN = 'Screen',
 }

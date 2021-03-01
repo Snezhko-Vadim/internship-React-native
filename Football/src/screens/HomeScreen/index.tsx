@@ -13,7 +13,7 @@ export const HomeScreen: FC = () => {
     <View style={styles.container}>
       <Text style={{ color: colors.text }}>{'Home'}</Text>
       {token !== undefined ? (
-        <Text style={{ color: colors.text }}>Hello, {token.name}</Text>
+        <Text style={{ color: colors.text }}>{`Hello, ${token.name}`}</Text>
       ) : (
         <Text>Please, log in</Text>
       )}
