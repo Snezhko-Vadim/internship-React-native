@@ -1,5 +1,5 @@
 import { SettingsInitialStateType } from './types';
-import { SettingsActionType, SETTINGS_STRINGS } from 'actions/types';
+import { SettingsActionType, SETTINGS_STRINGS } from '@root/actions/types';
 
 const settingsInitialState: SettingsInitialStateType = {
   isEnabledDarkTheme: false,

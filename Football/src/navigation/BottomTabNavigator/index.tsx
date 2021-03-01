@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeScreen } from 'screens/HomeScreen';
-import { SettingsScreen } from 'screens/SettingsScreen';
+import { HomeScreen } from '@root/screens/HomeScreen';
+import { SettingsScreen } from '@root/screens/SettingsScreen';
 import { styles } from './styles';
 import { SCREEN_NAMES } from './types';
 
@@ -17,7 +17,7 @@ export const BottomTabNavigator: FC = () => {
       }}
     >
       <Tab.Screen name={SCREEN_NAMES.HOME} component={HomeScreen} />
-      <Tab.Screen name={SCREEN_NAMES.SCREEN} component={SettingsScreen} />
+      <Tab.Screen name={SCREEN_NAMES.SETTINGS} component={SettingsScreen} />
     </Tab.Navigator>
   );
 };

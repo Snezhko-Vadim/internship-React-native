@@ -17,7 +17,7 @@ module.exports = {
           '.json',
         ],
         alias: {
-          root: './src',
+          '@root': './src',
         },
       },
     ],

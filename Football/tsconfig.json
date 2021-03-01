@@ -26,7 +26,10 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true, 
     "esModuleInterop": true,
-
+    "baseUrl": "./",
+    "paths": {
+      "@root/*": ["src/*"],
+    }
   },
   "exclude": [
     "app/__tests__/" // exclude test files

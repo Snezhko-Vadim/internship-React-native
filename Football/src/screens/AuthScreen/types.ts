@@ -1,4 +1,4 @@
-import { AuthTokenType, AuthActionType } from 'actions/types';
+import { AuthTokenType, AuthActionType } from '@root/actions/types';
 
 export { AuthTokenType };
 

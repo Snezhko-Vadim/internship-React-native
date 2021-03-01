@@ -1,5 +1,5 @@
 import { AuthInitialStateType } from './types';
-import { AuthActionType, AUTH_STRINGS } from 'actions/types';
+import { AuthActionType, AUTH_STRINGS } from '@root/actions/types';
 
 const authInitialState: AuthInitialStateType = {
   isLoading: true,

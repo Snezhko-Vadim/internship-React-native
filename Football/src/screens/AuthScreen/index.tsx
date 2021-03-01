@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { AuthScreenView } from './AuthScreenView';
-import { allActions } from 'actions';
+import { allActions } from '@root/actions';
 
 export const AuthScreen: FC = () => {
   const dispatch = useDispatch();
