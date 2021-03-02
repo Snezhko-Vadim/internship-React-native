@@ -16,6 +16,7 @@ export const competitionsReducer = (
       return {
         ...state,
         data: action.data,
+        isLoading: false,
       };
     case FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_REQUEST:
       return {
@@ -26,6 +27,7 @@ export const competitionsReducer = (
       return {
         ...state,
         error: action.error,
+        isLoading: false,
       };
   }
   return state;
