@@ -1,8 +1,4 @@
-import {
-  AuthTokenType,
-  FetchCompetitionsDataType,
-  FetchCompetitionsErrorType,
-} from '@root/actions/types';
+import { AuthTokenType, CompetitionsDataType, CompetitionsErrorType } from '@root/actions/types';
 import { rootReducer } from './index';
 
 export type AuthInitialStateType = {
@@ -17,8 +13,8 @@ export type SettingsInitialStateType = {
 
 export type CompetitionsInitialStateType = {
   isLoading: boolean;
-  data: undefined | FetchCompetitionsDataType;
-  error: undefined | FetchCompetitionsErrorType;
+  data: undefined | CompetitionsDataType;
+  error: undefined | CompetitionsErrorType;
 };
 
 export type RootState = ReturnType<typeof rootReducer>;

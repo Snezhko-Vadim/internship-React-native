@@ -1,11 +1,11 @@
 import {
   FETCH_COMPETITIONS_STRINGS,
-  FetchCompetitionsDataType,
-  FetchCompetitionsErrorType,
+  CompetitionsDataType,
+  CompetitionsErrorType,
   CompetitionType,
 } from './types';
 
-const fetchCompetitionsLoaded = (data: FetchCompetitionsDataType) => {
+const fetchCompetitionsLoaded = (data: CompetitionsDataType) => {
   return {
     type: FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_SUCCESS,
     data: data,
@@ -18,7 +18,7 @@ const fetchCompetitionsRequested = () => {
   };
 };
 
-const fetchCompetitionsFailure = (error: FetchCompetitionsErrorType) => {
+const fetchCompetitionsFailure = (error: CompetitionsErrorType) => {
   return {
     type: FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_FAILURE,
     error: error,

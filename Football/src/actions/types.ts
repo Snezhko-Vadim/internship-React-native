@@ -39,12 +39,12 @@ export type CompetitionType = {
   plan: any;
 };
 
-export type FetchCompetitionsDataType = Array<CompetitionType>;
-export type FetchCompetitionsErrorType = string; // what type is it ?
+export type CompetitionsDataType = Array<CompetitionType>;
+export type CompetitionsErrorType = string; // what type is it ?
 
 export type FetchCompetitionsActionType = {
   type: FETCH_COMPETITIONS_STRINGS;
 
-  data?: FetchCompetitionsDataType;
-  error?: FetchCompetitionsErrorType;
+  data?: CompetitionsDataType;
+  error?: CompetitionsErrorType;
 };

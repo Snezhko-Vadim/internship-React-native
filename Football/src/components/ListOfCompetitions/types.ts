@@ -1,6 +1,6 @@
-import { FetchCompetitionsDataType } from '@root/actions/types';
+import { CompetitionsDataType } from '@root/actions/types';
 
 export type ListOfCompetitionsPropsType = {
-  competitionsData: FetchCompetitionsDataType | undefined;
-  onPressFunction: (competitionId: string) => void;
+  competitionsData: CompetitionsDataType | undefined;
+  onPressListItem: (competitionId: string) => void;
 };

@@ -3,7 +3,7 @@ import { View, Text, FlatList } from 'react-native';
 import { ListOfCompetitionsPropsType } from './types';
 
 export const ListOfCompetitions: React.FC<ListOfCompetitionsPropsType> = (props) => {
-  const { competitionsData, onPressFunction } = props;
+  const { competitionsData, onPressListItem } = props;
   return (
     <View>
       <Text>List of competitions</Text>
@@ -12,7 +12,7 @@ export const ListOfCompetitions: React.FC<ListOfCompetitionsPropsType> = (props)
         data={competitionsData}
         renderItem={({ item }) => (
           <View>
-            <Text onPress={() => onPressFunction(item.id.toString())}>{item.name}</Text>
+            <Text onPress={() => onPressListItem(item.id.toString())}>{item.name}</Text>
           </View>
         )}
       />
