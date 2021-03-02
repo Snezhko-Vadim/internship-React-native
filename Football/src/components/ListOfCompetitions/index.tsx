@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
+import { ListOfCompetitionsPropsType } from './types';
 
-export const ListOfCompetitions: React.FC = (props) => {
+export const ListOfCompetitions: React.FC<ListOfCompetitionsPropsType> = (props) => {
   const { competitionsData, onPressFunction } = props;
   return (
     <View>
@@ -11,7 +12,7 @@ export const ListOfCompetitions: React.FC = (props) => {
         data={competitionsData}
         renderItem={({ item }) => (
           <View>
-            <Text onPress={() => onPressFunction(item.id)}>{item.name}</Text>
+            <Text onPress={() => onPressFunction(item.id.toString())}>{item.name}</Text>
           </View>
         )}
       />

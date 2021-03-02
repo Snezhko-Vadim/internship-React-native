@@ -1,23 +1,26 @@
-const FETCH_COMPETITIONS_SUCCESS = 'FETCH_COMPETITIONS_SUCCESS';
-const FETCH_COMPETITIONS_REQUEST = 'FETCH_COMPETITIONS_REQUESTED';
-const FETCH_COMPETITIONS_FAILURE = 'FETCH_COMPETITIONS_FAILURE;';
+import {
+  FETCH_COMPETITIONS_STRINGS,
+  FetchCompetitionsDataType,
+  FetchCompetitionsErrorType,
+  CompetitionType,
+} from './types';
 
-const fetchCompetitionsLoaded = (data) => {
+const fetchCompetitionsLoaded = (data: FetchCompetitionsDataType) => {
   return {
-    type: FETCH_COMPETITIONS_SUCCESS,
+    type: FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_SUCCESS,
     data: data,
   };
 };
 
 const fetchCompetitionsRequested = () => {
   return {
-    type: FETCH_COMPETITIONS_REQUEST,
+    type: FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_REQUEST,
   };
 };
 
-const fetchCompetitionsFailure = (error) => {
+const fetchCompetitionsFailure = (error: FetchCompetitionsErrorType) => {
   return {
-    type: FETCH_COMPETITIONS_FAILURE,
+    type: FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_FAILURE,
     error: error,
   };
 };
@@ -51,7 +54,7 @@ export const fetchCompetitions = () => {
           for (let i = 0; i < availableCompetitions.length; i++) {
             availableCompetitionsArray.push(
               response.competitions.find(
-                (competition) => competition.id === availableCompetitions[i],
+                (competition: CompetitionType) => competition.id === availableCompetitions[i],
               ),
             );
           }

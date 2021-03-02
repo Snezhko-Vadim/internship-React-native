@@ -1,22 +1,28 @@
-const competitionsInitialState = {
+import { CompetitionsInitialStateType } from './types';
+import { FetchCompetitionsActionType, FETCH_COMPETITIONS_STRINGS } from '@root/actions/types';
+
+const competitionsInitialState: CompetitionsInitialStateType = {
   isLoading: false,
-  data: null,
-  error: null,
+  data: undefined,
+  error: undefined,
 };
 
-export const competitionsReducer = (state = competitionsInitialState, action) => {
+export const competitionsReducer = (
+  state = competitionsInitialState,
+  action: FetchCompetitionsActionType,
+) => {
   switch (action.type) {
-    case 'FETCH_COMPETITIONS_SUCCESS':
+    case FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_SUCCESS:
       return {
         ...state,
         data: action.data,
       };
-    case 'FETCH_COMPETITIONS_REQUESTED':
+    case FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_REQUEST:
       return {
         ...state,
         isLoading: true,
       };
-    case 'FETCH_COMPETITIONS_FAILURE':
+    case FETCH_COMPETITIONS_STRINGS.FETCH_COMPETITIONS_FAILURE:
       return {
         ...state,
         error: action.error,

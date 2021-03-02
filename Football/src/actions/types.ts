@@ -6,6 +6,12 @@ export enum AUTH_STRINGS {
   SIGN_OUT = 'SIGN_OUT',
 }
 
+export enum FETCH_COMPETITIONS_STRINGS {
+  FETCH_COMPETITIONS_SUCCESS = 'FETCH_COMPETITIONS_SUCCESS',
+  FETCH_COMPETITIONS_REQUEST = 'FETCH_COMPETITIONS_REQUESTED',
+  FETCH_COMPETITIONS_FAILURE = 'FETCH_COMPETITIONS_FAILURE;',
+}
+
 export type AuthTokenType = {
   name: string;
   password: string;
@@ -19,4 +25,26 @@ export type AuthActionType = {
   type: AUTH_STRINGS;
 
   token?: AuthTokenType;
+};
+
+export type CompetitionType = {
+  area: any;
+  code: any;
+  currentSeason: any;
+  emblemUrl: string | null;
+  id: number;
+  lastUpdated: string;
+  name: string;
+  numberOfAvailableSeasons: number;
+  plan: any;
+};
+
+export type FetchCompetitionsDataType = Array<CompetitionType>;
+export type FetchCompetitionsErrorType = string; // what type is it ?
+
+export type FetchCompetitionsActionType = {
+  type: FETCH_COMPETITIONS_STRINGS;
+
+  data?: FetchCompetitionsDataType;
+  error?: FetchCompetitionsErrorType;
 };
